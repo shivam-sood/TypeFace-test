@@ -6,6 +6,7 @@ with open('2.txt', 'r') as file:
      input_lines = [line.strip('\n') for line in file]
 phonetic_matches = []
 for word in input_lines:
-    if fuzz.ratio(input_string, word) > 80:
+    # print(fuzz.ratio(input_string, word))
+    if fuzz.ratio(input_string, word) > 50:
         phonetic_matches.append(word)
 print(phonetic_matches)
